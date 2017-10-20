@@ -15,8 +15,15 @@ for line in sys.stdin:
     try:
         temp = float(temp)
     
+     except ValueError:
+        continue
 
+    if temp > current_max:
+        current_max = temp
+        x = y
+print()
 lookup=weather.lookup()
 condition=lookup()
 print(condition['text']
+
 
